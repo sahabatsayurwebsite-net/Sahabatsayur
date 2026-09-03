@@ -3,28 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Katalog & Layanan — Sahabat Sayur</title>
-<meta name="description" content="Katalog 300+ produk segar, segmen pelanggan, form order, dan kontak Sahabat Sayur.">
-<link rel="icon" href="assets/logo-sahabat-sayur.jpg">
+<title>Katalog & Layanan â€” Sahabat Sayur</title>
+<meta name="description" content="Katalog 300+ produk segar, segmen pelanggan, formulir pemesanan, dan kontak Sahabat Sayur.">
+<link rel="icon" href="logo-sahabat-sayur.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          forest: { DEFAULT:'#1F5C3B', dark:'#153F28', 50:'#EEF5EF' },
-          leaf: { DEFAULT:'#6FA83D', light:'#9CCB5B' },
-          cream: '#FBF7EC',
-          paper: '#FFFFFF',
-          ink: '#17281D',
-          mango: '#E2963E',
+    tema: {
+      memperpanjang: {
+        warna: {
+          hutan: { DEFAULT:'#1F5C3B', gelap:'#153F28', 50:'#EEF5EF' },
+          daun: { DEFAULT:'#6FA83D', lampu:'#9CCB5B' },
+          krim: '#FBF7EC',
+          kertas: '#FFFFFF',
+          tinta: '#17281D',
+          mangga: '#E2963E',
         },
-        fontFamily: {
-          display: ['"Fraunces"', 'serif'],
-          body: ['"Plus Jakarta Sans"', 'sans-serif'],
+        Keluarga font: {
+          tampilan: ['"Fraunces"', 'serif'],
+          isi: ['"Plus Jakarta Sans"', 'sans-serif'],
         },
       }
     }
@@ -32,39 +32,39 @@
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Plus Jakarta Sans', sans-serif; background:#FBF7EC; color:#17281D; }
+  badan { font-family: 'Plus Jakarta Sans', sans-serif; latar belakang:#FBF7EC; warna:#17281D; }
   h1,h2,h3,h4, .font-display { font-family: 'Fraunces', serif; }
 
-  /* signature marquee */
+  /* papan nama tanda tangan */
   .marquee-track { display:flex; width:max-content; animation: marquee 42s linear infinite; }
   .marquee-track.reverse { animation-direction: reverse; animation-duration: 55s; }
   @keyframes marquee { from{ transform:translateX(0);} to{ transform:translateX(-50%);} }
   .marquee-wrap:hover .marquee-track { animation-play-state: paused; }
 
-  /* fade in on scroll */
+  /* memudar saat digulir */
   .reveal { opacity:0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity:1; transform:none; }
 
   .leaf-bullet::before{
-    content:'';
-    display:inline-block;
-    width:9px; height:9px;
-    margin-right:.6rem;
-    border-radius: 0 60% 60% 60%;
-    background: #6FA83D;
-    flex-shrink:0;
-    margin-top:.45rem;
+    isi:'';
+    tampilan:blok sebaris;
+    lebar:9px; tinggi:9px;
+    margin-kanan:.6rem;
+    radius-batas: 0 60% 60% 60%;
+    latar belakang: #6FA83D;
+    fleksibel-menyusut:0;
+    margin-atas:.45rem;
   }
 
   .vine::before{
-    content:'';
-    position:absolute; left:50%; top:0; bottom:0;
-    width:2px;
-    background: repeating-linear-gradient(to bottom, #6FA83D 0 6px, transparent 6px 12px);
-    transform: translateX(-50%);
+    isi:'';
+    posisi:absolut; kiri:50%; atas:0; bawah:0;
+    lebar:2px;
+    latar belakang: gradien linier berulang (ke bawah, #6FA83D 0 6px, transparan 6px 12px);
+    transformasi: terjemahkanX(-50%);
   }
 
-  input:focus, textarea:focus, select:focus, button:focus-visible, a:focus-visible {
+  input:fokus, textarea:fokus, select:fokus, button:fokus-terlihat, a:fokus-terlihat {
     outline: 2px solid #6FA83D; outline-offset: 2px;
   }
 
@@ -78,53 +78,53 @@
 
   @media (prefers-reduced-motion: reduce){
     .marquee-track{ animation: none; }
-    .reveal{ transition:none; opacity:1; transform:none; }
+    .ungkap{ transisi:tidak ada; opasitas:1; transformasi:tidak ada; }
   }
 </style>
 </head>
 
 <body class="antialiased">
 
-<!-- ============ TOP BAR ============ -->
+<!-- ============ BAR ATAS ============ -->
 <header id="navbar" class="fixed top-0 inset-x-0 z-50 bg-cream/90 backdrop-blur border-b border-forest/10">
   <div class="max-w-7xl mx-auto px-5 md:px-8 h-[72px] flex items-center justify-between">
     <a href="index.html" class="flex items-center gap-2.5">
-      <img src="assets/logo-sahabat-sayur.jpg" alt="Logo Sahabat Sayur" class="h-11 w-11 object-contain">
+      <img src="logo-sahabat-sayur.jpg" alt="Logo Sahabat Sayur" class="h-11 w-11 object-contain">
       <span class="font-display font-semibold text-lg text-forest-dark leading-none hidden sm:block">Sahabat Sayur</span>
     </a>
     <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-ink/80">
       <a href="index.html" class="hover:text-forest transition-colors flex items-center gap-1.5">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M12 19l-7-7 7-7/svg>
         Beranda
       </a>
-      <a href="#segmen" class="hover:text-forest transition-colors">Segmen Pelanggan</a>
+      <a href="#segmen" class="hover:text-forest transisi-warna">Segmen Pelanggan</a>
       <a href="#produk" class="hover:text-forest transition-colors">Produk</a>
-      <a href="#order" class="hover:text-forest transition-colors">Order</a>
+      <a href="#order" class="hover:text-forest transition-colors">Pesan</a>
       <a href="#kontak" class="hover:text-forest transition-colors">Kontak</a>
     </nav>
     <div class="flex items-center gap-3">
       <a href="#order" class="hidden sm:inline-flex items-center gap-2 bg-forest hover:bg-forest-dark text-cream text-sm font-semibold px-5 py-2.5 rounded-full transition-colors">
         Pesan Sekarang
       </a>
-      <button id="menuBtn" aria-label="Buka menu" aria-expanded="false" class="lg:hidden w-10 h-10 grid place-items-center rounded-full border border-forest/20">
+      <button id="menuBtn" aria-label="Menu Buka" aria-expanded="false" class="lg:hidden w-10 h-10 grid place-items-center rounded-full border border-forest/20">
         <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-forest-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
       </button>
     </div>
   </div>
   <div id="mobileMenu" class="hidden lg:hidden border-t border-forest/10 bg-cream">
     <nav class="flex flex-col px-5 py-4 gap-1 text-[15px] font-medium text-ink/85">
-      <a href="index.html" class="py-2.5 border-b border-forest/5">← Beranda</a>
+      <a href="index.html" class="py-2.5 border-b border-forest/5">→ Beranda</a>
       <a href="#segmen" class="py-2.5 border-b border-forest/5">Segmen Pelanggan</a>
       <a href="#produk" class="py-2.5 border-b border-forest/5">Produk</a>
-      <a href="#order" class="py-2.5 border-b border-forest/5">Order</a>
+      <a href="#order" class="py-2.5 border-b border-forest/5">Pesan</a>
       <a href="#kontak" class="py-3 font-semibold text-forest">Kontak</a>
     </nav>
   </div>
 </header>
 
-<!-- small page heading since hero lives on the homepage -->
+<!-- Judul halaman kecil karena hero berada di halaman utama -->
 <div class="pt-[96px] pb-2 max-w-7xl mx-auto px-5 md:px-8">
-  <p class="text-xs text-ink/45"><a href="index.html" class="hover:text-forest">Beranda</a> / <span class="text-forest-dark font-medium">Katalog &amp; Layanan</span></p>
+  <p class="text-xs text-ink/45"><a href="index.html" class="hover:text-forest">Beranda</a> / <span class="text-forest-dark font-medium">Katalog & Layanan</span></p>
 </div>
 
 <!-- ============ SEGMEN PELANGGAN ============ -->
@@ -137,24 +137,24 @@
 
     <div class="reveal grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
       <div class="bg-forest/60 border border-cream/10 rounded-2xl p-6 hover:bg-forest/90 transition-colors">
-        <svg class="w-8 h-8 text-leaf-light mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4 21V9l3-6 3 6v12M13 21V9l3-6 3 6v12M4 13h6M13 13h6"/></svg>
+        <svg class="w-8 h-8 text-leaf-light mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4 21V9l3-6 3 6v12M13 21V9l3-6 3 6v12M4 13h6M13 13h6/svg>
         <h3 class="font-display text-lg font-semibold">Restoran Masakan Jepang</h3>
         <p class="text-cream/65 text-sm mt-2 leading-relaxed">Kesegaran dan presisi grading untuk sayuran khas Jepang seperti kyuri, daun obha, dan poling.</p>
       </div>
       <div class="bg-forest/60 border border-cream/10 rounded-2xl p-6 hover:bg-forest/90 transition-colors">
-        <svg class="w-8 h-8 text-leaf-light mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20M5 8c0 4 3 6 7 6s7-2 7-6M8 22h8"/></svg>
+        <svg class="w-8 h-8 text-leaf-light mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20M5 8c0 4 3 6 7 6s7-2 7-6M8 22h8/svg>
         <h3 class="font-display text-lg font-semibold">Restoran Masakan Nusantara</h3>
         <p class="text-cream/65 text-sm mt-2 leading-relaxed">Bumbu, rempah, dan sayur lokal lengkap untuk cita rasa autentik masakan Nusantara.</p>
       </div>
       <div class="bg-forest/60 border border-cream/10 rounded-2xl p-6 hover:bg-forest/90 transition-colors">
-        <svg class="w-8 h-8 text-leaf-light mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
-        <h3 class="font-display text-lg font-semibold">Central Kitchen</h3>
-        <p class="text-cream/65 text-sm mt-2 leading-relaxed">Konsistensi mutu dan volume besar untuk kebutuhan produksi dapur terpusat harian.</p>
+        <svg class="w-8 h-8 text-leaf-light mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6/svg>
+        <h3 class="font-display text-lg font-semibold">Dapur Pusat</h3>
+        <p class="text-cream/65 text-sm mt-2 leading-relaxed">Konsistensi mutu dan volume besar untuk kebutuhan produksi dapur kegagalan harian.</p>
       </div>
       <div class="bg-forest/60 border border-cream/10 rounded-2xl p-6 hover:bg-forest/90 transition-colors">
-        <svg class="w-8 h-8 text-leaf-light mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.8h8.6a2 2 0 0 0 2-1.6L22 8H6"/></svg>
+        <svg class="w-8 h-8 text-leaf-light mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.8h8.6a2 2 0 0 0 2-1.6L22 8H6/svg>
         <h3 class="font-display text-lg font-semibold">Supermarket / Ritel Modern</h3>
-        <p class="text-cream/65 text-sm mt-2 leading-relaxed">Pasokan terjadwal dan rapi, siap display, untuk kebutuhan ritel harian.</p>
+        <p class="text-cream/65 text-sm mt-2 leading-relaxed">Pasokan terjadwal dan rapi, siap ditampilkan, untuk kebutuhan ritel harian.</p>
       </div>
     </div>
   </div>
@@ -169,7 +169,7 @@
         <h2 class="font-display font-semibold text-3xl md:text-[2.5rem] text-forest-dark mt-3 leading-tight">300+ Bahan Segar, Satu Sahabat</h2>
       </div>
       <div class="relative w-full sm:w-72">
-        <svg class="w-4 h-4 text-ink/40 absolute left-4 top-1/2 -translate-y-1/2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <svg class="w-4 h-4 text-ink/40 absolute left-4 top-1/2 -translate-y-1/2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7path d="m21 21-4.3-4.3/svg>
         <input id="searchInput" type="text" placeholder="Cari produk..." class="w-full pl-10 pr-4 py-2.5 rounded-full border border-forest/20 bg-paper text-sm focus:border-forest transition-colors">
       </div>
     </div>
@@ -177,72 +177,147 @@
     <div id="tabBar" class="reveal flex flex-wrap gap-2.5 mt-8">
       <button data-cat="sayuran" class="tab-btn text-sm font-semibold px-4 py-2 rounded-full bg-forest text-cream">Sayuran</button>
       <button data-cat="buah" class="tab-btn text-sm font-semibold px-4 py-2 rounded-full bg-forest/10 text-forest-dark hover:bg-forest/20">Buah</button>
-      <button data-cat="bumbu" class="tab-btn text-sm font-semibold px-4 py-2 rounded-full bg-forest/10 text-forest-dark hover:bg-forest/20">Bumbu &amp; Rempah</button>
+      <button data-cat="bumbu" class="tab-btn text-sm font-semibold px-4 py-2 rounded-full bg-forest/10 text-forest-dark hover:bg-forest/20">Bumbu & Rempah</button>
       <button data-cat="dapur" class="tab-btn text-sm font-semibold px-4 py-2 rounded-full bg-forest/10 text-forest-dark hover:bg-forest/20">Produk Dapur</button>
     </div>
 
     <p id="resultCount" class="text-sm text-ink/50 mt-5"></p>
     <div id="productGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mt-3"></div>
-    <p id="emptyState" class="hidden text-center text-ink/50 py-16">Produk tidak ditemukan. Coba kata kunci lain atau hubungi kami langsung — kemungkinan besar tetap tersedia.</p>
+    <p id="emptyState" class="hidden text-center text-ink/50 py-16">Produk tidak ditemukan. Coba kata kunci lain atau hubungi kami langsung â€” kemungkinan besar tetap tersedia.</p>
   </div>
 </section>
 
-<!-- ============ ORDER ============ -->
+<!-- ============ PESANAN ============ -->
 <section id="order" class="py-20 md:py-28 bg-forest/[0.04]">
   <div class="max-w-7xl mx-auto px-5 md:px-8">
     <div class="reveal max-w-xl">
-      <span class="text-xs font-semibold tracking-widest uppercase text-leaf">Order Produk</span>
-      <h2 class="font-display font-semibold text-3xl md:text-[2.5rem] text-forest-dark mt-3 leading-tight">Susun Pesanan Anda</h2>
-      <p class="text-ink/65 mt-4 leading-relaxed">Pilih kategori, cari nama produk, dan tentukan jumlah yang Anda butuhkan. Pesanan akan dirapikan otomatis dan dikirim langsung ke WhatsApp tim kami.</p>
+      <span class="text-xs font-semibold tracking-widest uppercase text-leaf">Pesan Produk</span>
+      <h2 class="font-display font-semibold text-3xl md:text-[2.5rem] text-forest-dark mt-3 leading-tight">Pesan, Selangkah Demi Selangkah</h2>
+      <p class="text-ink/65 mt-4 leading-relaxed">Ikuti langkah mudah berikut â€” seperti mengisi formulir biasa. Di akhir, pesanan Anda otomatis dirapikan dan dikirim ke WhatsApp kami.</p>
     </div>
 
-    <div class="reveal bg-paper border border-forest/10 rounded-2xl p-5 md:p-8 mt-10">
-      <div class="hidden md:grid grid-cols-12 gap-3 text-xs font-semibold uppercase tracking-wide text-ink/45 px-1 mb-2">
-        <span class="col-span-3">Kategori Produk</span>
-        <span class="col-span-4">Nama Barang</span>
-        <span class="col-span-2">Jumlah</span>
-        <span class="col-span-2">Satuan</span>
-        <span class="col-span-1"></span>
-      </div>
+    <div class="reveal bg-paper border border-forest/10 rounded-2xl p-6 md:p-10 mt-10 max-w-xl mx-auto">
 
-      <div id="orderRows" class="space-y-3"></div>
-
-      <button id="addRowBtn" type="button" class="inline-flex items-center gap-2 text-sm font-semibold text-forest hover:text-forest-dark mt-4">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
-        Tambah Item
-      </button>
-
-      <div class="grid sm:grid-cols-3 gap-4 mt-8 pt-6 border-t border-forest/10">
-        <div>
-          <label class="text-sm font-semibold text-forest-dark">Nama Pemesan</label>
-          <input id="orderNama" type="text" class="w-full mt-1.5 px-4 py-2.5 rounded-lg border border-forest/20 bg-cream/50 text-sm" placeholder="Nama Anda">
+      <!-- kemajuan -->
+      <div class="mb-8">
+        <div class="flex items-center justify-between text-xs font-semibold text-ink/50 mb-2">
+          <span id="wizStepLabel">Langkah 1 dari 4</span>
+          <span id="wizCartCount" class="hidden text-forest">ðŸ›' <span id="wizCartNum">0</span> item</span>
         </div>
-        <div>
-          <label class="text-sm font-semibold text-forest-dark">Nama Usaha</label>
-          <input id="orderUsaha" type="text" class="w-full mt-1.5 px-4 py-2.5 rounded-lg border border-forest/20 bg-cream/50 text-sm" placeholder="Restoran / Central Kitchen / Toko">
-        </div>
-        <div>
-          <label class="text-sm font-semibold text-forest-dark">Nomor Telepon</label>
-          <input id="orderTelepon" type="tel" class="w-full mt-1.5 px-4 py-2.5 rounded-lg border border-forest/20 bg-cream/50 text-sm" placeholder="08xx-xxxx-xxxx">
+        <div class="h-1.5 bg-forest/10 rounded-full overflow-hidden">
+          <div id="wizProgressBar" class="h-full bg-forest rounded-full transition-all duration-300" style="width:25%"></div>
         </div>
       </div>
 
-      <p id="orderError" class="hidden text-sm text-mango font-medium mt-4"></p>
+      <!-- LANGKAH 1: kategori -->
+      <div class="wiz-step" data-step="cat">
+        <h3 class="font-display text-xl md:text-2xl font-semibold text-forest-dark">Produk apa yang mau dipesan?</h3>
+        <p class="text-sm text-ink/55 mt-1.5 mb-6">Pilih salah satu kategori di bawah ini.</p>
+        <div class="grid grid-cols-2 gap-3">
+          <button type="button" class="wiz-cat-btn text-left bg-cream/60 hover:bg-leaf/15 border-2 border-forest/10 hover:border-forest rounded-xl p-4 transition-colors" data-cat="sayuran">
+            <span class="text-2xl">ðŸ¥¬</span>
+            <p class="font-semibold text-forest-dark mt-2">Sayuran</p>
+          </button>
+          <button type="button" class="wiz-cat-btn text-left bg-cream/60 hover:bg-leaf/15 border-2 border-forest/10 hover:border-forest rounded-xl p-4 transition-colors" data-cat="buah">
+            <span class="text-2xl">ðŸ Ž</span>
+            <p class="font-semibold text-forest-dark mt-2">Buah</p>
+          </button>
+          <button type="button" class="wiz-cat-btn text-left bg-cream/60 hover:bg-leaf/15 border-2 border-forest/10 hover:border-forest rounded-xl p-4 transition-colors" data-cat="bumbu">
+            <span class="text-2xl">ðŸŒ¶ï¸ </span>
+            <p class="font-semibold text-forest-dark mt-2">Bumbu & Rempah</p>
+          </button>
+          <button type="button" class="wiz-cat-btn text-left bg-cream/60 hover:bg-leaf/15 border-2 border-forest/10 hover:border-forest rounded-xl p-4 transition-colors" data-cat="dapur">
+            <span class="text-2xl">ðŸ š</span>
+            <p class="font-semibold text-forest-dark mt-2">Produk Dapur</p>
+          </button>
+        </div>
+      </div>
 
-      <button id="sendOrderBtn" type="button" class="w-full inline-flex items-center justify-center gap-2 bg-forest hover:bg-forest-dark text-cream font-semibold px-6 py-3.5 rounded-full transition-colors mt-6">
-        Kirim Order via WhatsApp
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Z"/></svg>
+      <!-- LANGKAH 2: nama produk -->
+      <div class="wiz-step hidden" data-step="name">
+        <h3 class="font-display text-xl md:text-2xl font-semibold text-forest-dark">Pilih produknya</h3>
+        <p class="text-sm text-ink/55 mt-1.5 mb-4">Ketik untuk mencari, lalu ketuk nama produknya.</p>
+        <input id="wizSearch" type="text" placeholder="Cari nama produk..." class="w-full px-4 py-3 rounded-xl border-2 border-forest/15 focus:border-forest text-sm mb-3">
+        <div id="wizNameList" class="max-h-64 overflow-y-auto space-y-1.5 pr-1"></div>
+      </div>
+
+      <!-- LANGKAH 3: jumlah & satuan -->
+      <div class="wiz-step hidden" data-step="qty">
+        <h3 class="font-display text-xl md:text-2xl font-semibold text-forest-dark">Berapa banyak <span id="wizQtyProdName" class="text-leaf">produk</span>?</h3>
+        <p class="text-sm text-ink/55 mt-1.5 mb-6">Isi jumlah, lalu pilih satuannya.</p>
+        <input id="wizQtyInput" type="number" min="0" step="0.5" inputmode="decimal" placeholder="Contoh: 5" class="w-full px-4 py-4 rounded-xl border-2 border-forest/15 focus:border-forest text-2xl font-display text-center mb-5">
+        <div class="grid grid-cols-3 gap-2.5 mb-6">
+          <button type="button" class="wiz-unit-btn bg-cream/60 hover:bg-leaf/15 border-2 border-forest/10 rounded-xl py-3 font-semibold text-sm text-forest-dark" data-unit="Kg">Kg</button>
+          <button type="button" class="wiz-unit-btn bg-cream/60 hover:bg-leaf/15 border-2 border-forest/10 rounded-xl py-3 font-semibold text-sm text-forest-dark" data-unit="Pack">Pack</button>
+          <button type="button" class="wiz-unit-btn bg-cream/60 hover:bg-leaf/15 border-2 border-forest/10 rounded-xl py-3 font-semibold text-sm text-forest-dark" data-unit="Pcs">Pcs</button>
+          <button type="button" class="wiz-unit-btn bg-cream/60 hover:bg-leaf/15 border-2 border-forest/10 rounded-xl py-3 font-semibold text-sm text-forest-dark" data-unit="Ikat">Ikat</button>
+          <button type="button" class="wiz-unit-btn bg-cream/60 hover:bg-leaf/15 border-2 border-forest/10 rounded-xl py-3 font-semibold text-sm text-forest-dark" data-unit="Karung">Karung</button>
+          <button type="button" class="wiz-unit-btn bg-cream/60 hover:bg-leaf/15 border-2 border-forest/10 rounded-xl py-3 font-semibold text-sm text-forest-dark" data-unit="Lainnya">Lainnya</button>
+        </div>
+        <button id="wizAddToCart" type="button" class="w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3.5 rounded-full transition-colors">
+          Tambahkan ke Pesanan
+        </button>
+      </div>
+
+      <!-- LANGKAH 4: keranjang / ulasan -->
+      <div class="wiz-step hidden" data-step="cart">
+        <h3 class="font-display text-xl md:text-2xl font-semibold text-forest-dark">âœ… Produk telah ditambahkan!</h3>
+        <p class="text-sm text-ink/55 mt-1.5 mb-5">Berikut daftar pesanan Anda sejauh ini.</p>
+        <div id="wizCartList" class="space-y-2 mb-6"></div>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <button id="wizAddMore" type="button" class="border-2 border-forest/20 hover:border-forest text-forest-dark font-semibold py-3 rounded-full transition-colors">
+            + Tambah Produk Lain
+          </button>
+          <button id="wizToInfo" type="button" class="bg-forest hover:bg-forest-dark text-cream font-semibold py-3 rounded-full transition-colors">
+            Lanjut ke Data Diri
+          </button>
+        </div>
+      </div>
+
+      <!-- LANGKAH 5: data diri -->
+      <div class="wiz-step hidden" data-step="info">
+        <h3 class="font-display text-xl md:text-2xl font-semibold text-forest-dark">Data Diri Anda</h3>
+        <p class="text-sm text-ink/55 mt-1.5 mb-6">Supaya kami tahu harus mengirim ke mana dan menghubungi siapa.</p>
+        <div class="space-y-4">
+          <div>
+            <label class="text-sm font-semibold text-forest-dark">Nama Anda</label>
+            <input id="wizNama" type="text" class="w-full mt-1.5 px-4 py-3 rounded-xl border-2 border-forest/15 focus:border-forest text-sm" placeholder="Contoh: Ibu Sari">
+          </div>
+          <div>
+            <label class="text-sm font-semibold text-forest-dark">Nama Usaha (opsional)</label>
+            <input id="wizUsaha" type="text" class="w-full mt-1.5 px-4 py-3 rounded-xl border-2 border-forest/15 focus:border-forest text-sm" placeholder="Restoran / Toko / Rumah Tangga">
+          </div>
+          <div>
+            <label class="text-sm font-semibold text-forest-dark">Nomor WhatsApp Anda</label>
+            <input id="wizTelp" type="tel" class="w-full mt-1.5 px-4 py-3 rounded-xl border-2 border-forest/15 focus:border-forest text-sm" placeholder="08xx-xxxx-xxxx">
+          </div>
+        </div>
+        <button id="wizToSummary" type="button" class="w-full bg-forest hover:bg-forest-dark text-cream font-semibold py-3.5 rounded-full transition-colors mt-6">
+          Lihat ringkasan pesanan
+        </button>
+      </div>
+
+      <!-- LANGKAH 6: ringkasan & kirim -->
+      <div class="wiz-step hidden" data-step="summary">
+        <h3 class="font-display text-xl md:text-2xl font-semibold text-forest-dark">Ringkasan Pesanan</h3>
+        <p class="text-sm text-ink/55 mt-1.5 mb-5">Cek sekali lagi sebelum dikirim ya.</p>
+        <div id="wizSummaryBox" class="bg-cream/60 border border-forest/10 rounded-xl p-4 text-sm space-y-3"></div>
+        <button id="wizSendBtn" type="button" class="w-full inline-flex items-center justify-center gap-2 bg-forest hover:bg-forest-dark text-cream font-semibold py-4 rounded-full transition-colors mt-6 text-base">
+          Kirim Pesanan via WhatsApp
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Z/svg>
+        </button>
+      </div>
+
+      <p id="wizError" class="hidden text-sm text-mango font-medium mt-4 text-center"></p>
+
+      <!-- tombol kembali -->
+      <button id="wizBackBtn" type="button" class="hidden text-sm font-semibold text-ink/45 hover:text-forest mt-6 flex items-center gap-1.5">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M12 19l-7-7 7-7"/svg>
+        Kembali
       </button>
-      <p class="text-xs text-ink/45 text-center mt-3">Daftar pesanan akan dirapikan otomatis dan dikirim lewat WhatsApp ke +62 895-3086-7477.</p>
     </div>
   </div>
 </section>
-
-<!-- product name datalists per category, built by JS -->
-<datalist id="dl-sayuran"></datalist>
-<datalist id="dl-buah"></datalist>
-<datalist id="dl-bumbu"></datalist>
-<datalist id="dl-dapur"></datalist>
 
 <!-- ============ KONTAK ============ -->
 <section id="kontak" class="py-20 md:py-28">
@@ -262,8 +337,8 @@
             <span class="font-semibold text-sm">+62 895-3086-7477 (WhatsApp)</span>
           </a>
           <div class="mt-5 space-y-3.5 text-sm text-cream/85">
-            <p class="flex gap-3"><svg class="w-4.5 h-4.5 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> cvsahabatrayanusantara@gmail.com</p>
-            <p class="flex gap-3"><svg class="w-4.5 h-4.5 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg> Jl. Maulana Hassanudin, Perumahan Taman Jaya, Blok C4 No. 19, Kec. Cipondoh, Kel. Cipondoh, Tangerang Kota, Banten</p>
+            <p class="flex gap-3"><svg class="w-4.5 h-4.5 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"path d="m3 7 9 6 9-6"/svg> cvsahabatrayanusantara@gmail.com</p>
+            <p class="flex gap-3"><svg class="w-4.5 h-4.5 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg> Jl. Maulana Hassanudin, Perumahan Taman Jaya, Blok C4 No.19, Kec. Cipondoh, Kel. Cipondoh, Tangerang Kota, Banten</p>
           </div>
         </div>
 
@@ -273,7 +348,7 @@
         </div>
       </div>
 
-      <!-- form -->
+      <!-- formulir -->
       <form id="contactForm" class="lg:col-span-3 bg-paper border border-forest/10 rounded-2xl p-7 md:p-8 space-y-4">
         <div class="grid sm:grid-cols-2 gap-4">
           <div>
@@ -300,7 +375,7 @@
           <select name="kebutuhan" class="w-full mt-1.5 px-4 py-2.5 rounded-lg border border-forest/20 bg-cream/50 text-sm">
             <option>Restoran Masakan Jepang</option>
             <option>Restoran Masakan Nusantara</option>
-            <option>Central Kitchen</option>
+            <option>Dapur Pusat</option>
             <option>Supermarket / Ritel Modern</option>
             <option>Lainnya</option>
           </select>
@@ -311,9 +386,9 @@
         </div>
         <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-forest hover:bg-forest-dark text-cream font-semibold px-6 py-3.5 rounded-full transition-colors">
           Kirim via WhatsApp
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6/svg>
         </button>
-        <p class="text-xs text-ink/45 text-center">Pesan Anda akan disiapkan otomatis dan dikirim lewat WhatsApp ke tim kami.</p>
+        <p class="text-xs text-ink/45 text-center">Pesan Anda akan disiapkan otomatis dan dikirim melalui WhatsApp ke tim kami.</p>
       </form>
     </div>
   </div>
@@ -325,17 +400,17 @@
     <div class="grid md:grid-cols-3 gap-10">
       <div>
         <div class="flex items-center gap-2.5">
-          <img src="assets/logo-sahabat-sayur.jpg" alt="Logo Sahabat Sayur" class="h-10 w-10 object-contain rounded bg-cream/5">
+          <img src="logo-sahabat-sayur.jpg" alt="Logo Sahabat Sayur" class="h-10 w-10 objek-berisi bulat bg-cream/5">
           <span class="font-display font-semibold text-lg text-cream">Sahabat Sayur</span>
         </div>
-        <p class="text-sm mt-3 leading-relaxed">Harga Bersahabat, Kualitas Hebat.</p>
-        <span class="inline-block text-xs font-semibold tracking-wide uppercase bg-leaf/20 text-leaf-light px-3 py-1 rounded-full mt-3">Fresh Everyday</span>
+        <p class="text-sm mt-3 lead-relaxed">Harga Bersahabat, Kualitas Hebat.</p>
+        <span class="inline-block text-xs font-semibold tracking-wide uppercase bg-leaf/20 text-leaf-light px-3 py-1 rounded-full mt-3">Segar Setiap Hari</span>
       </div>
       <div>
         <p class="text-sm font-semibold text-cream mb-3">Menu Cepat</p>
         <div class="flex flex-col gap-2 text-sm">
-          <a href="index.html#tentang" class="hover:text-cream transition-colors">Tentang Kami</a>
-          <a href="index.html#kerjasama" class="hover:text-cream transition-colors">Kerjasama</a>
+          <a href="index.html#tentang" class="hover:text-cream transisi-warna">Tentang Kami</a>
+          <a href="index.html#kerjasama" class="hover:text-cream transisi-warna">Kerjasama</a>
           <a href="#produk" class="hover:text-cream transition-colors">Produk</a>
           <a href="#order" class="hover:text-cream transition-colors">Pesan Sekarang</a>
         </div>
@@ -350,54 +425,54 @@
       </div>
     </div>
     <div class="border-t border-cream/10 mt-10 pt-6 text-xs text-cream/50 flex flex-wrap gap-2 justify-between">
-      <p>© <span id="year"></span> CV Sahabat Raya Nusantara. Seluruh hak cipta dilindungi.</p>
+      <p>Â© <span id="tahun"></span> CV Sahabat Raya Nusantara. Seluruh hak cipta dilindungi.</p>
       <p>Sahabat Sayur</p>
     </div>
   </div>
 </footer>
 
 <a href="https://wa.me/6289530867477?text=Halo%20Sahabat%20Sayur%2C%20saya%20ingin%20menanyakan..." target="_blank" rel="noopener"
-   aria-label="Hubungi via WhatsApp"
+   aria-label="Hubungi melalui WhatsApp"
    class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-forest hover:bg-forest-dark text-cream grid place-items-center shadow-lg shadow-forest/30">
   <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm5.2 14.15c-.22.62-1.28 1.2-1.78 1.24-.46.05-1.02.07-1.65-.1-.38-.11-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.44-1.08-2.74 0-1.3.68-1.94.93-2.2.22-.24.5-.3.66-.3h.48c.15 0 .36-.02.55.43.22.55.75 1.88.82 2.02.07.14.11.3.02.48-.08.18-.13.29-.26.44-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.15.28.68 1.14 1.47 1.85 1.01.92 1.87 1.21 2.14 1.35.27.14.43.12.6-.07.16-.19.68-.8.86-1.07.18-.27.36-.22.6-.13.24.09 1.55.74 1.82.87.27.14.45.2.51.32.07.12.07.68-.15 1.3Z"/></svg>
 </a>
 
 
 <script>
-/* ================= PRODUCT DATA ================= */
-const PRODUCTS = {
-  sayuran: ["Asparagus lokal","Baby buncis","Baby kailan lokal","Baby pakcoy","Baby romaine","Bayam hijau","Bayam hijau ptg","Beetroot","Belimbing wuluh/sayur","Brokoli batang pendek","Brokoli import","Buncis besar","Bunga genjer","Bunga kecombrang besar","Bunga pepaya","Bunga sedap malam","Caisim manis","Caisim/sawi hijau","Comeo bulat/cuciwis/baby kol","Daun comeo/cuciwis (baby)","Daun melinjo","Daun pepaya jepang","Daun pepaya jepang petik","Daun pepaya pahit","Daun singkong","Daun singkong potong batang","Jagung manis kulit","Jagung manis kupas","Jagung muda kulit","Jagung muda/acar kecil kupas","Jamur champignon","Jamur enoki","Jamur king oyster","Jamur king oyster/eringgi @200gr","Jamur kuping fresh","Jamur kuping kering","Jamur merang","Jamur shimeji coklat/buna","Jamur shimeji putih","Jamur shitake fresh/basah ukuran sedang","Jamur tiram","Jantung Pisang","Kabocha orange","Kacang panjang","Kailan import/hongkong","Kailan lokal","Kale","Kangkung","Kangkung batang pendek","Kangkung ptg akar","Kapri import","Kapri lokal muda","Kembang kol batang pendek","Kenikir","Kentang","Kentang ukuran 220-240 gram","Kol putih","Kol ungu","Kucai","Kyuri/timun jepang","Labu kundur","Labu parang","Labu siam besar","Labu siam besar muda","Labu siam kecil","Lettuce head","Leunca","Lobak putih besar","Lobak putih kecil","Lobak ungu/red radish","Lobak ungu/red radish ukuran kecil","Melinjo","Melinjo kupas","Nangka muda/sayur","Nasubi","Okra","Oyong","Pakcoy","Paprika hijau","Paprika kuning","Paprika merah","Pare","Pare muda","Pepaya muda","Pete kupas","Pete kupas tidak di belah","Pete utuh/papan","Poling/horenzo/bayam jepang","Romain lettuce","Sawi putih","Sawi putih kimchi","Selada air","Selada hijau keriting","Selada ungu/lolorosa","Singkong","Singkong kupas","Tauge bangkok","Tauge biasa","Tauge jepang","Tauge rawon","Terong hijau bulat","Terong ungu","Timun besar","Timun lalap","Timun sedang","Tomat cerry","Tomat ceri","Tomat hijau","Tomat merah","Ubi cilembu @170-180 gram","Ubi cilembu besar","Ubi cilembu sedang","Ubi jepang/orange","Ubi merah","Ubi putih besar","Ubi ungu","Wortel import","Zucchini"],
-  buah: ["Alpukat","Anggur hijau","Anggur merah","Apel fuji","Apel hijau granny","Apel merah","Belimbing buah","Bengkuang","Bengkuang besar","Jeruk bali","Jeruk limau/limo","Jeruk nipis","Jeruk peras","Kedondong","Kiwi hijau","Lemon cui/jeruk kalamansi/bangka/kunci","Lemon import","Lemon lokal","Mangga harum manis","Mangga kweni matang","Mangga muda","Markisa","Melon hijau/madu","Naga merah","Nanas 1/2 matang","Nanas honi sunpride size M/L","Nanas palembang","Nangka kupas","Pear century","Pear korea","Pear packham/pear hijau","Pear sweet @260-280 gram","Pear yali","Pepaya mateng","Pisang ambon (kg)","Pisang cavendish kg","Pisang hijau ambon","Pisang kepok sisir","Pisang raja kg","Pisang raja sisir","Pisang sunpride kg","Pisang tanduk pcs","Pisang uli sisir","Semangka merah","Strawberry","Sunkist"],
-  bumbu: ["Asam buah","Asam jawa","Asam jawa kg","Bawang bombay","Bawang bombay merah","Bawang merah goreng","Bawang merah iris/slice","Bawang merah kulit/utuh","Bawang merah kupas","Bawang putih kulit kating","Bawang putih kulit/utuh","Bawang putih kupas","Biji cengkeh","Biji jintan","Biji pala","Bunga lawang/star anis","Bunga telang kering","Cabe hijau besar","Cabe hijau besar petik","Cabe hijau keriting","Cabe hijau keriting petik","Cabe hijau rawit","Cabe hijau rawit petik","Cabe merah kering","Cabe merah besar","Cabe merah besar petik","Cabe merah keriting","Cabe merah keriting petik","Cabe merah rawit","Cabe merah rawit petik","Daun basil","Daun bawang besar","Daun bawang besar ptg akar","Daun bawang cung","Daun bawang son","Daun coriander/wansui/ketumbar","Daun dill","Daun jeruk","Daun kari","Daun kemangi","Daun kunyit","Daun mint","Daun obha","Daun pandan","Daun salam","Daun seledri lokal","Daun seledri ptg akar","Daun suji","Daun thyme (pack)","Desaku bumbu marinasi","Desaku Ketumbar bubuk","Desaku kunyit bubuk","Ebi kering","Gula aren","Gula batu","Gula merah/jawa","Jahe emprit","Jahe merah besar","Jahe putih","Jahe putih kupas","Kayu manis","Kemiri bulat/utuh","Kencur","Ketumbar","Kluwak","Kunyit","Kunyit besar","Kunyit biang","Kunyit giling","Lada hitam bulat/butir/utuh","Lada Putih bubuk (kg)","Lada putih bulat/butir","Ladaku lada bubuk","Lengkuas/laos","Pala bubuk","Parsley/daun peterseli","Rebon Halus","Rosemary","Seledri import/stick","Sereh/serai kecil","Sereh gajah","Temulawak","Wijen putih"],
-  dapur: ["Cendol hijau","Cincau hitam","Daun pisang","Emping","Ikan Asin Cuek Layang","Ikan asin jambal","Ikan asin kapas","Ikan teri jengki","Ikan teri jengki putih","Ikan teri medan","Jagung pipil @500gr","Kacang hijau","Kacang kedelai","Kacang mede utuh","Kacang merah","Kacang tanah kulit","Kacang tanah kupas","Kelapa parut muda kg","Kelapa parut muda pcs","Kelapa parut tua kg","Kelapa parut tua pcs","Kolang kaling","Kong Kee tahu jepang ayam","Kong Kee tahu jepang udang","Kulit kembang tahu asin","Kulit lumpia (pack)","Kulit pangsit","Kwetiau aha 200 gr","Kwetiau Cap Jempol / @500gr","Kwetiau gedung panjang @500 gram","Lontong","Mie Hokian @500 gram","Mie kuning basah","Sakake tahu silken merah","Sakake tofu @230gr","Sakura tahu sutera kotak","Sania minyak goreng 2L","Sayur asem (bungkus)","Segitiga tepung 1kg","Segitiga tepung premium 1kg","Tahu bandung kuning @10 pcs","Tahu coklat segitiga @10 pcs","Tahu pong @10 pcs/@100 gram","Tahu putih bandung @10 pcs","Tahu putih cina","Tahu putih kecil","Tahu sumedang","Tape singkong","Telur asin matang","Telur asin mentah","Telur ayam negeri","Telur ayam negeri 1kg @16 pcs","Telur Bebek","Telur omega","Telur Omega @tray 30 pcs","Telur omega kg @16 pcs","Telur puyuh","Tempe","Tempe mendoan","Udang vaname","Udang vaname 1kg @40 pcs"]
+/* ================= DATA PRODUK ================= */
+const PRODUK = {
+  sayuran: ["Asparagus lokal", "Baby buncis", "Baby kailan lokal", "Baby pakcoy", "Baby romaine", "Bayam hijau", "Bayam hijau ptg", "Beetroot", "Belimbing wuluh/sayur", "Brokoli batang pendek", "Brokoli import", "Buncis besar", "Bunga genjer", "Bunga kecombrang besar", "Bunga pepaya", "Bunga sedap malam","Caisim manis","Caisim/sawi hijau","Comeo bulat/cuciwis/baby kol","Daun comeo/cuciwis (baby)","Daun melinjo","Daun pepaya jepang","Daun pepaya jepang petik","Daun pepaya pahit","Daun singkong","Daun singkong potong","Jagung manis kulit","Jagung manis kupas","Jagung muda kulit","Jagung muda/acar kecil kupas", "Jamur champignon", "Jamur enoki", "Jamur king tiram", "Jamur king tiram/eringgi @200gr", "Jamur kuping fresh", "Jamur kuping kering", "Jamur merang", "Jamur shimeji coklat/buna", "Jamur shimeji putih", "Jamur shitake fresh/basah ukuran sedang", "Jamur tiram", "Jantung Pisang", "Kabocha orange", "Kacang panjang", "Kailan import/hongkong","Kailan lokal","Kale","Kangkung","Kangkung batang pendek","Kangkung ptg akar","Kapri import","Kapri lokal muda","Kembang kol batang pendek","Kenikir","Kentang","Kentang ukuran 220-240 gram","Kol putih","Kol ungu","Kucai","Kyuri/timun jepang","Labu kundur","Labu parang","Labu siam besar", "Labu siam besar muda", "Labu siam kecil", "Selada head","Leunca","Lobak putih besar","Lobak putih kecil","Lobak ungu/lobak merah","Lobak ungu/lobak merah ukuran kecil","Melinjo","Melinjo kupas","Nangka muda/sayur","Nasubi","Okra","Oyong","Pakcoy","Paprika hijau","Paprika kuning","Paprika merah","Pare","Pare muda","Pepaya muda","Pete kupas", "Pete kupas tidak dibelah", "Pete utuh/papan", "Poling/horenzo/bayam jepang", "Romain lettuce", "Sawi putih", "Sawi putih kimchi", "Selada air", "Selada hijau keriting", "Singkong", "Singkong kupas", "Tauge bangkok", "Tauge biasa", "Tauge jepang", "Tauge rawon", "Terong hijau bulat", "Terong ungu","Timun besar","Timun lalap", "Timun sedang", "Tomat cerry","Tomat ceri", "Tomat hijau", "Tomat merah", "Ubi cilembu @170-180 gram", "Ubi cilembu besar", "Ubi cilembu sedang", "Ubi jepang/orange", "Ubi merah", "Ubi putih besar", "Ubi ungu", "Wortel import", "Zucchini"],
+  buah: ["Alpukat","Anggur hijau","Anggur merah","Apel fuji","Apel hijau granny","Apel merah","Belimbing buah","Bengkuang","Bengkuang besar","Jeruk bali","Jeruk limau/limo","Jeruk lemon","Jeruk peras","Kedondong","Kiwi hijau","Lemon cui/jeruk kalamansi/bangka/kunci","Lemon import","Lemon lokal","Mangga harum manis", "Mangga kweni matang", "Mangga muda", "Markisa", "Melon hijau/madu", "Naga merah", "Nanas 1/2 matang", "Nanas honi sunpride ukuran M/L", "Nanas palembang", "Nangka kupas", "Pear century", "Pear korea", "Pear packham/pear hijau", "Pear manis @260-280 gram", "Pear yali", "Pepaya mateng”, “Pisang ambon (kg)", "Pisang cavendish kg", "Pisang hijau ambon", "Pisang kepok sisir", "Pisang raja kg", "Pisang raja sisir", "Pisang sunpride kg", "Pisang tanduk pcs", "Pisang uli sisir", "Semangka merah", "Strawberry", "Sunkist"],
+  bumbu: ["Asam buah", "Asam jawa", "Asam jawa kg", "Bawang bombay", "Bawang bombay merah", "Bawang merah goreng", "Bawang merah iris/slice", "Bawang merah kulit/utuh", "Bawang merah kupas", "Bawang putih kulit kating", "Bawang putih kulit/utuh", "Bawang putih kupas", "Biji cengkeh", "Biji jintan", "Biji pala", "Bunga lawang/star anis", "Bunga telang kering", "Cabe hijau besar petik", "Cabe hijau besar petik", "Cabe hijau keriting", "Cabe hijau keriting petik", "Cabe hijau rawit", "Cabe hijau rawit petik", "Cabe merah kering", "Cabe merah besar", "Cabe merah besar petik", "Cabe merah keriting", "Cabe merah keriting petik", "Cabe merah rawit", "Cabe merah rawit petik", "Daun basil", "Daun bawang besar", "Daun bawang besar ptg akar","Daun bawang cung", "Daun bawang son", "Daun coriander/wansui/ketumbar", "Daun dill", "Daun jeruk", "Daun kari", "Daun kemangi", "Daun kunyit", "Daun mint", "Daun obha", "Daun pandan", "Daun salam", "Daun seledri lokal", "Daun seledri ptg akar", "Daun suji", "Daun thyme (pack)", "Desaku bumbu marinasi", "Desaku Ketumbar bubuk", "Desaku kunyit bubuk", "Ebi kering", "Gula aren", "Gula batu", "Gula merah/jawa", "Jahe emprit", "Jahe merah besar", "Jahe putih", "Jahe putih kupas", "Kayu manis", "Kemiri bulat/utuh", "Kencur", "Ketumbar", "Kluwak", "Kunyit", "Kunyit besar", "Kunyit biang", "Kunyit giling", "Lada hitam bulat/butir/utuh","Lada Putih bubuk (kg)", "Lada putih bulat/butir", "Ladaku lada bubuk", "Lengkuas/laos", "Pala bubuk", "Peterseli/daun peterseli", "Rebon Halus", "Rosemary", "Seledri import/stick", "Sereh/serai kecil", "Sereh gajah", "Temulawak", "Wijen putih"],
+  dapur: ["Cendol hijau", "Cincau hitam", "Daun pisang", "Emping", "Ikan Asin Cuek Layang", "Ikan asin jambal", "Ikan asin kapas", "Ikan teri jengki", "Ikan teri jengki putih", "Ikan teri medan", "Jagung pipil @500gr", "Kacang hijau", "Kacang mainan", "Kacang mede utuh", "Kacang merah", "Kacang tanah kulit", "Kacang tanah kupas", "Kelapa parut muda kg", "Kelapa parut muda pcs", "Kelapa parut tua kg", "Kelapa parut tua pcs", "Kolang kaling", "Kong Kee tahu jepang ayam", "Kong Kee tahu jepang udang", "Kulit kembang tahu asin", "Kulit lumpia (pack)", "Kulit pangsit", "Kwetiau aha 200 gr", "Kwetiau Cap Jempol / @500gr", "Kwetiau gedung panjang @500 gram","Lontong", "Mie Hokian @500 gram", "Mie kuning basah", "Sakake tahu silken merah", "Sakake tahu @230gr", "Sakura tahu sutera kotak", "Sania minyak goreng 2L", "Sayur asem (bungkus)", "Segitiga tepung 1kg", "Segitiga tepung premium 1kg", "Tahu bandung kuning @10 pcs", "Tahu coklat @10 pcs","Tahu pong @10 pcs/@100 gram","Tahu putih bandung @10 pcs","Tahu putih cina","Tahu putih kecil","Tahu sumedang","Tape singkong","Telur asin matang","Telur asin mentah","Telur ayam negeri","Telur ayam negeri 1kg @16 pcs","Telur Bebek","Telur omega","Telur Omega @tray 30 pcs",,"Telur omega kg @16 pcs","Telur puyuh", "Tempe", "Tempe mendoan","Udang vaname","Udang vaname 1kg @40 pcs"]
 };
 const CAT_LABEL = { sayuran:'Sayuran', buah:'Buah', bumbu:'Bumbu & Rempah', dapur:'Produk Dapur' };
 
-/* ================= PRODUCT CATALOG ================= */
-let activeCat = 'sayuran';
-let query = '';
+/* ================= KATALOG PRODUK ================= */
+biarkan activeCat = 'sayuran';
+biarkan kueri = '';
 const grid = document.getElementById('productGrid');
 const emptyState = document.getElementById('emptyState');
 const resultCount = document.getElementById('resultCount');
 
-function renderProducts(){
+fungsi renderProduk(){
   const list = PRODUCTS[activeCat].filter(p => p.toLowerCase().includes(query.toLowerCase()));
   grid.innerHTML = '';
   resultCount.textContent = `${list.length} produk dalam kategori ${CAT_LABEL[activeCat]}`;
-  if(list.length === 0){
+  jika panjang daftar === 0){
     emptyState.classList.remove('hidden');
-  } else {
+  } kalau tidak {
     emptyState.classList.add('hidden');
     list.forEach(name => {
       const card = document.createElement('div');
       card.className = 'prod-card bg-paper border border-forest/10 rounded-lg px-3.5 py-3 text-sm text-ink/80';
-      card.textContent = name;
+      card.textContent = nama;
       grid.appendChild(card);
     });
   }
 }
 document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('klik', () => {
     activeCat = btn.dataset.cat;
     document.querySelectorAll('.tab-btn').forEach(b => b.className = 'tab-btn text-sm font-semibold px-4 py-2 rounded-full bg-forest/10 text-forest-dark hover:bg-forest/20');
     btn.className = 'tab-btn text-sm font-semibold px-4 py-2 rounded-full bg-forest text-cream';
@@ -407,109 +482,170 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 document.getElementById('searchInput').addEventListener('input', e => { query = e.target.value; renderProducts(); });
 renderProducts();
 
-/* ================= MOBILE MENU ================= */
+/* ================= MENU MOBILE ================= */
 const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
-menuBtn.addEventListener('click', () => {
+menuBtn.addEventListener('klik', () => {
   const open = mobileMenu.classList.toggle('hidden') === false;
   menuBtn.setAttribute('aria-expanded', open);
 });
 mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
 
-/* ================= REVEAL ON SCROLL ================= */
+/* ================= UNGKAPKAN SAAT DIGULIR ================= */
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-}, { threshold: 0.12 });
+}, { ambang batas: 0,12 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-/* ================= ORDER FORM ================= */
-// build datalists for product name autocomplete per category
-Object.keys(PRODUCTS).forEach(cat => {
-  const dl = document.getElementById('dl-' + cat);
-  PRODUCTS[cat].forEach(name => {
-    const opt = document.createElement('option');
-    opt.value = name;
-    dl.appendChild(opt);
+/* ================= PENYIHIR PESANAN ================= */
+const wizSteps = ['cat','name','qty','cart','info','summary'];
+const wizStepTitles = { cat:'Langkah 1 dari 4', name:'Langkah 2 dari 4', qty:'Langkah 3 dari 4', cart:'Item ditambahkan', info:'Langkah 4 dari 4', ringkasan:'Ringkasan' };
+const wizProgress = { cat:25, name:50, qty:75, cart:85, info:95, summary:100 };
+
+let wizCart = []; // {kucing, label kucing, nama, jumlah, satuan}
+biarkan wizCurrentCat = null;
+biarkan wizCurrentName = null;
+biarkan wizCurrentUnit = null;
+let wizHistory = []; // untuk tombol kembali
+
+const wizStepEls = document.querySelectorAll('.wiz-step');
+const wizStepLabel = document.getElementById('wizStepLabel');
+const wizProgressBar = document.getElementById('wizProgressBar');
+const wizBackBtn = document.getElementById('wizBackBtn');
+const wizError = document.getElementById('wizError');
+const wizCartCount = document.getElementById('wizCartCount');
+const wizCartNum = dokumen.getElementById('wizCartNum');
+
+fungsi showWizStep(langkah, pushHistory = true){
+  jika (pushHistory && wizHistory[wizHistory.length-1] !== step) wizHistory.push(step);
+  wizStepEls.forEach(el => el.classList.toggle('hidden', el.dataset.step !== step));
+  wizStepLabel.textContent = wizStepTitles[langkah];
+  wizProgressBar.style.width = wizProgress[step] + '%';
+  wizBackBtn.classList.toggle('hidden', step === 'cat' && wizHistory.length <= 1);
+  wizError.classList.add('hidden');
+  Jika wizCart.length > 0, maka wizCartCount.classList.remove('hidden'); wizCartNum.textContent = wizCart.length; }
+  window.scrollTo({ top: document.getElementById('order').offsetTop - 90, behavior: 'smooth' });
+}
+
+wizBackBtn.addEventListener('click', () => {
+  wizHistory.pop(); // hapus riwayat saat ini
+  const prev = wizHistory.pop() || 'cat';
+  showWizStep(prev);
+});
+
+// LANGKAH 1: pilih kategori
+document.querySelectorAll('.wiz-cat-btn').forEach(btn => {
+  btn.addEventListener('klik', () => {
+    wizCurrentCat = btn.dataset.cat;
+    renderWizNameList('');
+    showWizStep('nama');
   });
 });
 
-const orderRows = document.getElementById('orderRows');
-let rowCount = 0;
-
-function addOrderRow(){
-  rowCount++;
-  const id = rowCount;
-  const row = document.createElement('div');
-  row.className = 'grid grid-cols-2 md:grid-cols-12 gap-3 items-center order-row';
-  row.dataset.id = id;
-  row.innerHTML = `
-    <select class="cat-select col-span-2 md:col-span-3 px-3 py-2.5 rounded-lg border border-forest/20 bg-cream/50 text-sm">
-      <option value="sayuran">Sayuran</option>
-      <option value="buah">Buah</option>
-      <option value="bumbu">Bumbu &amp; Rempah</option>
-      <option value="dapur">Produk Dapur</option>
-    </select>
-    <input list="dl-sayuran" class="name-input col-span-2 md:col-span-4 px-3 py-2.5 rounded-lg border border-forest/20 bg-cream/50 text-sm" placeholder="Ketik/pilih nama produk">
-    <input type="number" min="0" step="0.5" class="qty-input col-span-1 md:col-span-2 px-3 py-2.5 rounded-lg border border-forest/20 bg-cream/50 text-sm" placeholder="Jumlah">
-    <select class="unit-select col-span-1 md:col-span-2 px-3 py-2.5 rounded-lg border border-forest/20 bg-cream/50 text-sm">
-      <option value="Kg">Kg</option>
-      <option value="Pack">Pack</option>
-      <option value="Pcs">Pcs</option>
-      <option value="Ikat">Ikat</option>
-      <option value="Karung">Karung</option>
-      <option value="Lainnya">Lainnya</option>
-    </select>
-    <button type="button" class="remove-row col-span-2 md:col-span-1 text-ink/40 hover:text-mango justify-self-end" aria-label="Hapus item">
-      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
-    </button>
-  `;
-  orderRows.appendChild(row);
-
-  const catSelect = row.querySelector('.cat-select');
-  const nameInput = row.querySelector('.name-input');
-  catSelect.addEventListener('change', () => {
-    nameInput.setAttribute('list', 'dl-' + catSelect.value);
-    nameInput.value = '';
-  });
-  row.querySelector('.remove-row').addEventListener('click', () => {
-    if(orderRows.children.length > 1){ row.remove(); } else { nameInput.value=''; row.querySelector('.qty-input').value=''; }
+// LANGKAH 2: pilih nama produk
+fungsi renderWizNameList(query){
+  const list = document.getElementById('wizNameList');
+  const items = PRODUCTS[wizCurrentCat].filter(p => p.toLowerCase().includes(query.toLowerCase())).slice(0, 60);
+  list.innerHTML = '';
+  jika panjang item === 0){
+    list.innerHTML = '<p class="text-sm text-ink/45 py-4 text-center">Tidak ditemukan, coba kata kunci lain.</p>';
+    kembali;
+  }
+  item.forEach(nama => {
+    const b = document.createElement('button');
+    b.type = 'tombol';
+    b.className = 'w-full text-left px-4 py-3 rounded-lg bg-cream/50 hover:bg-leaf/15 border border-forest/10 text-sm text-ink/80 transition-colors';
+    b.textContent = nama;
+    b.addEventListener('klik', () => {
+      wizCurrentName = nama;
+      document.getElementById('wizQtyProdName').textContent = name;
+      document.getElementById('wizQtyInput').value = '';
+      wizCurrentUnit = null;
+      document.querySelectorAll('.wiz-unit-btn').forEach(u => u.classList.remove('bg-forest','text-cream'));
+      showWizStep('qty');
+    });
+    list.appendChild(b);
   });
 }
-addOrderRow(); // start with one row
+document.getElementById('wizSearch').addEventListener('input', e => renderWizNameList(e.target.value));
 
-document.getElementById('addRowBtn').addEventListener('click', addOrderRow);
-
-document.getElementById('sendOrderBtn').addEventListener('click', () => {
-  const errorEl = document.getElementById('orderError');
-  const rows = [...orderRows.querySelectorAll('.order-row')];
-  const items = rows.map(r => ({
-    cat: CAT_LABEL[r.querySelector('.cat-select').value],
-    name: r.querySelector('.name-input').value.trim(),
-    qty: r.querySelector('.qty-input').value.trim(),
-    unit: r.querySelector('.unit-select').value,
-  })).filter(it => it.name && it.qty);
-
-  if(items.length === 0){
-    errorEl.textContent = 'Isi minimal 1 item pesanan (nama produk & jumlah) sebelum mengirim.';
-    errorEl.classList.remove('hidden');
-    return;
-  }
-  errorEl.classList.add('hidden');
-
-  const nama = document.getElementById('orderNama').value.trim() || '-';
-  const usaha = document.getElementById('orderUsaha').value.trim() || '-';
-  const telp = document.getElementById('orderTelepon').value.trim() || '-';
-
-  let msg = `Halo Sahabat Sayur, saya ingin memesan:\n\n`;
-  items.forEach((it,i) => {
-    msg += `${i+1}. [${it.cat}] ${it.name} — ${it.qty} ${it.unit}\n`;
+// LANGKAH 3: jumlah & satuan
+document.querySelectorAll('.wiz-unit-btn').forEach(btn => {
+  btn.addEventListener('klik', () => {
+    document.querySelectorAll('.wiz-unit-btn').forEach(u => u.classList.remove('bg-forest','text-cream'));
+    btn.classList.add('bg-forest','text-cream');
+    wizCurrentUnit = btn.dataset.unit;
   });
-  msg += `\nNama Pemesan: ${nama}\nNama Usaha: ${usaha}\nNo. Telepon: ${telp}`;
+});
+document.getElementById('wizAddToCart').addEventListener('click', () => {
+  const qty = document.getElementById('wizQtyInput').value.trim();
+  if(!qty || Number(qty) <= 0){ wizError.textContent = 'Isi diukur dulu ya.'; wizError.classList.remove('hidden'); return; }
+  if(!wizCurrentUnit){ wizError.textContent = 'Pilih satuannya dulu ya (Kg/Pack/dst).'; wizError.classList.hapus('tersembunyi'); kembali; }
+  wizCart.push({ cat: wizCurrentCat, catLabel: CAT_LABEL[wizCurrentCat], name: wizCurrentName, qty, unit: wizCurrentUnit });
+  renderWizCart();
+  showWizStep('keranjang');
+});
 
+// LANGKAH 4: keranjang
+fungsi renderWizCart(){
+  const box = document.getElementById('wizCartList');
+  kotak.innerHTML = '';
+  wizCart.forEach((it, i) => {
+    const row = document.createElement('div');
+    row.className = 'flex items-center justify-between bg-cream/60 border border-forest/10 rounded-lg px-4 py-3';
+    row.innerHTML = `<span class="text-sm text-ink/80">${it.name} â€— <strong>${it.qty} ${it.unit}</strong></span>`;
+    const rm = document.createElement('button');
+    rm.type = 'tombol';
+    rm.className = 'text-ink/35 hover:text-mango';
+    rm.setAttribute('aria-label','Hapus');
+    rm.innerHTML = '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18/svg>';
+    rm.addEventListener('click', () => { wizCart.splice(i,1); renderWizCart(); if(wizCart.length===0) showWizStep('cat'); });
+    baris.tambahkanAnak(rm);
+    kotak.tambahkanAnak(baris);
+  });
+}
+document.getElementById('wizAddMore').addEventListener('click', () => showWizStep('cat'));
+document.getElementById('wizToInfo').addEventListener('click', () => showWizStep('info'));
+
+// LANGKAH 5: data diri
+document.getElementById('wizToSummary').addEventListener('click', () => {
+  const nama = document.getElementById('wizNama').value.trim();
+  const telp = document.getElementById('wizTelp').value.trim();
+  if(!nama || !telp){ wizError.textContent = 'Isi nama dan nomor WhatsApp Anda dulu ya.'; wizError.classList.hapus('tersembunyi'); kembali; }
+  renderWizSummary();
+  showWizStep('ringkasan');
+});
+
+// LANGKAH 6: Ringkasan & kirim
+fungsi renderWizSummary(){
+  const nama = document.getElementById('wizNama').value.trim() || '-';
+  const usaha = document.getElementById('wizUsaha').value.trim() || '-';
+  const telp = document.getElementById('wizTelp').value.trim() || '-';
+  const box = document.getElementById('wizSummaryBox');
+  let itemsHtml = wizCart.map((it,i) => `<p>${i+1}. ${it.name} â€” <strong>${it.qty} ${it.unit}</strong> <span class="text-ink/40">(${it.catLabel})</span></p>`).join('');
+  kotak.innerHTML = `
+    <div class="space-y-1">${itemsHtml}</div>
+    <div class="border-t border-forest/10 pt-3 mt-2 space-y-1 text-ink/70">
+      <p><strong>Nama:</strong> ${nama}</p>
+      <p><strong>Amerika Serikat:</strong> ${usaha}</p>
+      <p><strong>Nomor WhatsApp:</strong> ${telp}</p>
+    </div>
+  `;
+}
+document.getElementById('wizSendBtn').addEventListener('click', () => {
+  const nama = document.getElementById('wizNama').value.trim() || '-';
+  const usaha = document.getElementById('wizUsaha').value.trim() || '-';
+  const telp = document.getElementById('wizTelp').value.trim() || '-';
+  let msg = `Halo Sahabat Sayur, saya ingin memesan:\n\n`;
+  wizCart.forEach((it,i) => { msg += `${i+1}. [${it.catLabel}] ${it.name} â€” ${it.qty} ${it.unit}\n`; });
+  msg += `\nNama Pemesan: ${nama}\nNama Usaha: ${usaha}\nNo. Telepon: ${telp}`;
   window.open(`https://wa.me/6289530867477?text=${encodeURIComponent(msg)}`, '_blank');
 });
 
-/* ================= CONTACT FORM -> WHATSAPP ================= */
+showWizStep('kucing', false);
+wizHistory = ['cat'];
+
+/* ================= FORMULIR KONTAK -> WHATSAPP ================= */
 document.getElementById('contactForm').addEventListener('submit', function(e){
   e.preventDefault();
   const f = new FormData(this);
